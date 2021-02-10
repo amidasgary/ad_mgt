@@ -7,5 +7,5 @@
       surname: Smith
       password: B0bP4ssw0rd
       state: present
-      domain_username: LAB\admin-account
-      domain_password: SomePas2w0rd
+      domain_username: LAB\administrator
+      domain_password: P@sssw0rd
