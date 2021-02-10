@@ -1,0 +1,5 @@
+collections:
+  # Install a collection from Ansible Galaxy.
+  - name: community.windows
+    version: 1.3.0
+    source: https://galaxy.ansible.com
