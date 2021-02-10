@@ -1,0 +1,11 @@
+- hosts: all
+  tasks:
+  - name: aaa 
+    community.windows.win_domain_user:
+      name: bob
+      firstname: Bob
+      surname: Smith
+      password: B0bP4ssw0rd
+      state: present
+      domain_username: LAB\admin-account
+      domain_password: SomePas2w0rd
