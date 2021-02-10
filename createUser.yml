@@ -9,4 +9,4 @@
       state: present
       domain_username: administrator
       domain_password: P@sssw0rd
-      domain_server: dc01.lab.loc
+      domain_server: LAB
