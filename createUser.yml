@@ -1,17 +1,4 @@
-- hosts: localhost
-  connection: local
-  tasks:
-  - name: Read users from CSV file
-    read_csv:
-      path: users.csv
-      fieldnames: name,firstname,surename
-      delimiter: ';'
-    register: users
-
-  - debug:
-      msg: 'User {{ users.dict.dag.name }} has UID {{ users.dict.dag.firstname }} and GID {{ users.dict.dag.surename }}'
-
-- hosts: 192.168.178.3
+- hosts: all
   tasks:
   - name: Create AD User 
     community.windows.win_domain_user:
