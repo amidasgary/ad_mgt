@@ -2,8 +2,8 @@
   tasks:
   - name: Create AD User 
     community.windows.win_domain_user:
-      name: "{{ users.dict.dag.name }}"
-      firstname: "{{ users.dict.dag.firstname }}"
-      surname: "{{ users.dict.dag.surename }}"
+      name: "{{ UserList.list.1.name }}"
+      firstname: "{{ UserList.list.1.firstname }}"
+      surname: "{{ UserList.list.1.surename }}"
       password: B0bP4ssw0rd
       state: present
