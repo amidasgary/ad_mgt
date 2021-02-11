@@ -1,9 +1,20 @@
 - hosts: all
   tasks:
-  - name: aaa 
+  - name: Read users from CSV file
+  read_csv:
+    path: users.csv
+    fieldnames: name,firstname,surename
+    delimiter: ';'
+  register: users
+  delegate_to: localhost
+
+- debug:
+    msg: 'User {{ users.dict.dag.name }} has UID {{ users.dict.dag.firstname }} and GID {{ users.dict.dag.surename }}'
+    
+  - name: Create AD User 
     community.windows.win_domain_user:
-      name: bob
-      firstname: Bob
-      surname: Smith
+      name: {{ users.dict.dag.name }}
+      firstname: {{ users.dict.dag.firstname }}
+      surname: {{ users.dict.dag.surename }}
       password: B0bP4ssw0rd
       state: present
