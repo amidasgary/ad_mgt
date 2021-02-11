@@ -9,4 +9,4 @@
     delegate_to: localhost
 
   - debug:
-      msg: 'User {{ users.dict.dag.name }} has UID {{ users.dict.dag.firstname }} and GID {{ users.dict.dag.surename }}'
+      msg: 'User {{ users.dict.owen.name }} has UID {{ users.dict.owen.firstname }} and GID {{ users.dict.owen.surename }}'
