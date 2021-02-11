@@ -13,8 +13,8 @@
     
   - name: Create AD User 
     community.windows.win_domain_user:
-      name: {{ users.dict.dag.name }}
-      firstname: {{ users.dict.dag.firstname }}
-      surname: {{ users.dict.dag.surename }}
+      name: "{{ users.dict.dag.name }}"
+      firstname: "{{ users.dict.dag.firstname }}"
+      surname: "{{ users.dict.dag.surename }}"
       password: B0bP4ssw0rd
       state: present
