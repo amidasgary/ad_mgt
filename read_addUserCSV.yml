@@ -7,3 +7,6 @@
       delimiter: ','
     register: users
     delegate_to: localhost
+    
+  - debug:
+    var: ansible_search_path
