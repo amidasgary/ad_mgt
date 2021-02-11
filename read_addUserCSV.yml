@@ -10,3 +10,8 @@
     
   - debug:
       var: ansible_search_path
+      
+  - name: Artifact Public IP to Tower Workflows
+    set_stats:
+      data:
+        UserList: "{{ users }}"
