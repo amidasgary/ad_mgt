@@ -10,8 +10,6 @@
   - debug:
       msg: 'User {{ users.dict.dag.name }} has UID {{ users.dict.dag.firstname }} and GID {{ users.dict.dag.surename }}
 
-- hosts: 192.168.178.3
-  tasks:
   - name: Create AD User 
     community.windows.win_domain_user:
       name: "{{ users.dict.dag.name }}"
