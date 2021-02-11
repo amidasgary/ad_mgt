@@ -2,9 +2,8 @@
   tasks:
   - name: Create AD User 
     community.windows.win_domain_user:
-      name: "{{ item.list.0.name }}"
-      firstname: "{{ item.list.0.firstname }}"
-      surname: "{{ item.list.0.surename }}"
+      name: "{{ UserList.list.0.name }}"
+      firstname: "{{ UserList.list.0.firstname }}"
+      surname: "{{ UserList.list.0.surename }}"
       password: B0bP4ssw0rd
       state: present
-     with_indexed_items: "{{ UserList }}"
