@@ -2,9 +2,9 @@
   tasks:
   - name: Create AD User 
     community.windows.win_domain_user:
-      name: "{{ item.list.name }}"
-      firstname: "{{ item.list.firstname }}"
-      surname: "{{ item.list.surename }}"
+      name: "{{ item.name }}"
+      firstname: "{{ item.firstname }}"
+      surname: "{{ item.surename }}"
       password: B0bP4ssw0rd
       state: present
-    with_items: "{{ UserList }}"
+    with_items: "{{ UserList.list }}"
