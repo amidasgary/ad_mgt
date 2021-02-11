@@ -1,14 +1,14 @@
 - hosts: all
   tasks:
   - name: Read users from CSV file
-  read_csv:
-    path: users.csv
-    fieldnames: name,firstname,surename
-    delimiter: ';'
-  register: users
-  delegate_to: localhost
+    read_csv:
+      path: users.csv
+      fieldnames: name,firstname,surename
+      delimiter: ';'
+    register: users
+    delegate_to: localhost
 
-- debug:
+  - debug:
     msg: 'User {{ users.dict.dag.name }} has UID {{ users.dict.dag.firstname }} and GID {{ users.dict.dag.surename }}'
     
   - name: Create AD User 
