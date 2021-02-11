@@ -4,9 +4,6 @@
     read_csv:
       path: '/tmp/users.csv'
       fieldnames: name,firstname,surename
-      delimiter: ';'
+      delimiter: ','
     register: users
     delegate_to: localhost
-
-  - debug:
-      msg: 'User {{ users.dict.owen.name }} has UID {{ users.dict.owen.firstname }} and GID {{ users.dict.owen.surename }}'
