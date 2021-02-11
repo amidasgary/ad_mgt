@@ -3,7 +3,7 @@
   tasks:
   - name: Read users from CSV file
     read_csv:
-      path: users.csv
+      path: "/var/lib/awx/projects/ad-mgt/upload/users.csv"
       fieldnames: name,firstname,surename
       delimiter: ';'
     register: users
